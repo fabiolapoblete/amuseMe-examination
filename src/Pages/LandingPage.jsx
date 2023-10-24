@@ -9,15 +9,10 @@ import { useState } from "react";
 function LandingPage() {
   const [open, setOpen] = useState(false);
 
-  const isOpen = () => {
-    setOpen(true);
-  };
-
   const closeMenu = () => {
     setOpen(false);
   };
 
-  //lets start animation
   const item = {
     exit: {
       opacity: 0,
@@ -40,13 +35,10 @@ function LandingPage() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "100vh", opacity: 1 }}
             transition={{ duration: 0.5 }}
-            exit="exit"
+            // exit="exit"
           >
-            <div className="btn_close" onClick={closeMenu}>
-              X
-            </div>
-            <motion.a
-              href=""
+            <motion.div
+              className="menu__item"
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
@@ -59,10 +51,15 @@ function LandingPage() {
                 },
               }}
             >
-              Köp biljetter
-            </motion.a>
-            <motion.a
-              href=""
+              <img
+                className="balloon"
+                src="../../public/hot-air-balloon.png"
+                alt=""
+              />
+              <a href="">Köp biljetter</a>
+            </motion.div>
+            <motion.div
+              className="menu__item"
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7 }}
@@ -75,10 +72,15 @@ function LandingPage() {
                 },
               }}
             >
-              Öppetider
-            </motion.a>
-            <motion.a
-              href=""
+              <img
+                className="balloon"
+                src="../../public/hot-air-balloon.png"
+                alt=""
+              />
+              <a href="">Öppetider</a>
+            </motion.div>
+            <motion.div
+              className="menu__item"
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6 }}
@@ -91,10 +93,15 @@ function LandingPage() {
                 },
               }}
             >
-              Attraktioner
-            </motion.a>
-            <motion.a
-              href=""
+              <img
+                className="balloon"
+                src="../../public/hot-air-balloon.png"
+                alt=""
+              />
+              <a href="">Attraktioner</a>
+            </motion.div>
+            <motion.div
+              className="menu__item"
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
@@ -107,10 +114,16 @@ function LandingPage() {
                 },
               }}
             >
-              Mat & Dryck
-            </motion.a>
-            <motion.a
-              href=""
+              <img
+                className="balloon"
+                src="../../public/hot-air-balloon.png"
+                alt=""
+              />
+              <a href="">Mat & Dryck</a>
+            </motion.div>
+
+            <motion.div
+              className="menu__item"
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -123,10 +136,16 @@ function LandingPage() {
                 },
               }}
             >
-              Evenemang
-            </motion.a>
-            <motion.a
-              href=""
+              <img
+                className="balloon"
+                src="../../public/hot-air-balloon.png"
+                alt=""
+              />
+              <a href="">Evenemang</a>
+            </motion.div>
+
+            <motion.div
+              className="menu__item"
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -139,14 +158,23 @@ function LandingPage() {
                 },
               }}
             >
-              Kontakta oss
-            </motion.a>
+              <img
+                className="balloon"
+                src="../../public/hot-air-balloon.png"
+                alt=""
+              />
+              <a href="">Kontakta oss</a>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
       <header className="header">
-        <div className="menu" onClick={isOpen}>
-          <i className="fa fa-bars"></i>
+        <div className="menu" onClick={() => setOpen(!open)}>
+          {open ? (
+            <i className="fa fa-close"></i>
+          ) : (
+            <i className="fa fa-bars" onClick={closeMenu}></i>
+          )}
         </div>
         <MainTitle title={"Välkommen till AmuseMe!"} />
         <PrimaryButton title={"Biljetter"} />
