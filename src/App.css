@@ -1,6 +1,25 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Sansita:wght@400;700&display=swap');
+
+:root {
+  --background-color: #B4DED4;
+  --main-text-color: #F5ECD8;
+  --secondary-text-color: #2E2E40;
+  --primary-color: #D95252;
+  --green-color: #436B55;
+  --blue-color: #63A297;
+
+  --main-font: 'Sansita', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--main-font);
   text-align: center;
+  padding: 4rem 2rem;
 }
