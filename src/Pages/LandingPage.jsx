@@ -186,10 +186,21 @@ function LandingPage() {
           )}
         </div>
         <MainTitle title={"Välkommen till AmuseMe!"} />
-        <PrimaryButton action={handleClick} title={"Biljetter"} />
       </header>
 
-      <main>
+      <motion.main
+        initial={{ x: -500, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{
+          delay: 15,
+          duration: 5,
+          ease: "linear",
+          type: "spring",
+          damping: 10,
+          stiffness: 50,
+        }}
+      >
+        <PrimaryButton action={handleClick} title={"Biljetter"} />
         <MainCard
           title={"Attraktioner"}
           desc={"Upplev alla våra hisnande attraktioner"}
@@ -218,7 +229,7 @@ function LandingPage() {
             "Upplev minnesvärda evenemang och festligheter hos oss. Oavsett om det är konserter, festivaler, konferenser eller speciella tillställningar, är våra evenemang en chans att fördjupa dina intressen, umgås med likasinnade och skapa oförglömliga ögonblick tillsammans med andra."
           }
         />
-      </main>
+      </motion.main>
     </div>
   );
 }

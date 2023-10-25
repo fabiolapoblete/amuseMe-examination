@@ -71,7 +71,7 @@
     font-weight: 700;
 }
 
-.ticketPicker__button button {
+.roundButton {
     background-color: var(--primary-color);
     color: var(--main-text-color);
     font-family: var(--main-font);
@@ -82,23 +82,7 @@
     border: none;
     border-radius: 50%;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-}
-
-.disabled-button {
-    background-color: rgb(206, 204, 204);
-}
-
-.totalTicketPrice {
-    background-color: var(--secondary-text-color);
-    color: var(--main-text-color);
-    width: 335px;
-    height: 113px;
-    font-size: 40px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
+    cursor: pointer;
 }
 
 .payButton {
@@ -114,3 +98,45 @@
     cursor: pointer;
     margin-top: 2rem;
 }
+
+.disabledButton {
+    background-color: rgb(206, 204, 204);
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+    font-size: 30px;
+    font-weight: 700;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.disabledPayButton {
+    background-color: rgb(206, 204, 204);
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 1.3rem;
+    padding: 12px 24px;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.totalTicketPrice {
+    background-color: var(--secondary-text-color);
+    color: var(--main-text-color);
+    width: 335px;
+    height: 113px;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+

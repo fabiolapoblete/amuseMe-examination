@@ -26,21 +26,12 @@ function CheckoutPage() {
 
   const [popEffect, setPopEffect] = useState(false);
 
-  const updateTicketPrice = () => {
-    const adultTotalPrice = totalAdultTickets * adultPrice;
-    const childTotalPrice = totalChildTickets * childPrice;
-    setTotalTicketPrice(adultTotalPrice + childTotalPrice);
-    setPopEffect(true);
-  };
-
   const incrementAdult = () => {
     setTotalAdultTickets((prevTotalAdultTickets) => prevTotalAdultTickets + 1);
-    updateTicketPrice();
   };
 
   const incrementChild = () => {
     setTotalChildTickets((prevTotalChildTickets) => prevTotalChildTickets + 1);
-    updateTicketPrice();
   };
 
   const decrementAdult = () => {
@@ -48,7 +39,6 @@ function CheckoutPage() {
       setTotalAdultTickets(
         (prevTotalAdultTickets) => prevTotalAdultTickets - 1
       );
-    updateTicketPrice();
   };
 
   const decrementChild = () => {
@@ -56,7 +46,6 @@ function CheckoutPage() {
       setTotalChildTickets(
         (prevTotalChildTickets) => prevTotalChildTickets - 1
       );
-    updateTicketPrice();
   };
 
   const popVariants = {
@@ -64,10 +53,17 @@ function CheckoutPage() {
   };
 
   useEffect(() => {
+    const adultTotalPrice = totalAdultTickets * adultPrice;
+    const childTotalPrice = totalChildTickets * childPrice;
+    setTotalTicketPrice(adultTotalPrice + childTotalPrice);
+    setPopEffect(true);
+  }, [totalAdultTickets, totalChildTickets]);
+
+  useEffect(() => {
     if (popEffect) {
       const timer = setTimeout(() => {
-        setPopEffect(false); // Återgå till ursprungsläget
-      }, 300); // Tiden i millisekunder innan återgång
+        setPopEffect(false);
+      }, 300);
       return () => clearTimeout(timer);
     }
   }, [popEffect]);
@@ -97,14 +93,18 @@ function CheckoutPage() {
                 </div>
                 <div className="ticketPicker__button">
                   <button
+                    className={`roundButton ${
+                      totalAdultTickets === 0 ? "disabledButton" : ""
+                    }`}
                     onClick={decrementAdult}
-                    disabled={totalAdultTickets === 0}
-                    className={totalAdultTickets === 0 ? "disabled-button" : ""}
+                    disabled={totalAdultTickets == 0}
                   >
                     -
                   </button>
                   <h4>{totalAdultTickets}</h4>
-                  <button onClick={incrementAdult}>+</button>
+                  <button className="roundButton" onClick={incrementAdult}>
+                    +
+                  </button>
                 </div>
               </li>
               <li className="ticketPicker__type">
@@ -115,14 +115,18 @@ function CheckoutPage() {
 
                 <div className="ticketPicker__button">
                   <button
+                    className={`roundButton ${
+                      totalChildTickets === 0 ? "disabledButton" : ""
+                    }`}
                     onClick={decrementChild}
-                    disabled={totalChildTickets === 0}
-                    className={totalChildTickets === 0 ? "disabled-button" : ""}
+                    disabled={totalChildTickets == 0}
                   >
                     -
                   </button>
                   <h4>{totalChildTickets}</h4>
-                  <button onClick={incrementChild}>+</button>
+                  <button className="roundButton" onClick={incrementChild}>
+                    +
+                  </button>
                 </div>
               </li>
             </ul>
@@ -136,8 +140,10 @@ function CheckoutPage() {
             {totalTicketPrice} sek
           </motion.article>
           <button
-            disabled={totalTicketPrice === 0}
-            className={totalTicketPrice === 0 ? "disabled-button" : "payButton"}
+            className={`payButton ${
+              totalTicketPrice == 0 ? "disabledPayButton" : ""
+            }`}
+            disabled={totalTicketPrice == 0}
             onClick={handleClick}
           >
             Betala
