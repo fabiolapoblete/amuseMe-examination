@@ -2,7 +2,7 @@ import "./App.css";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import LandingPage from "./Pages/LandingPage";
 import TicketPage from "./Pages/TicketPage";
@@ -12,8 +12,17 @@ import ConfirmationPage from "./Pages/ConfirmationPage";
 export const dataContext = createContext();
 
 function App() {
+  const [totalChildTickets, setTotalChildTickets] = useState(0);
+  const [totalAdultTickets, setTotalAdultTickets] = useState(0);
   return (
-    <dataContext.Provider>
+    <dataContext.Provider
+      value={[
+        totalChildTickets,
+        totalAdultTickets,
+        setTotalAdultTickets,
+        setTotalChildTickets,
+      ]}
+    >
       <Router>
         <AnimatePresence
           onExitComplete={() => window.scrollTo(0, 0)}

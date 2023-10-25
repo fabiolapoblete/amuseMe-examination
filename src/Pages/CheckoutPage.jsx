@@ -1,8 +1,9 @@
 import SecondaryTitle from "../Components/SecondaryTitle";
 import { useNavigate } from "react-router-dom";
 import "../Styles/CheckoutPage.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { motion } from "framer-motion";
+import { dataContext } from "../App";
 
 const date = new Date();
 
@@ -20,8 +21,15 @@ function CheckoutPage() {
   const adultPrice = 495;
   const childPrice = 295;
 
-  const [totalAdultTickets, setTotalAdultTickets] = useState(0);
-  const [totalChildTickets, setTotalChildTickets] = useState(0);
+  const [
+    totalChildTickets,
+    totalAdultTickets,
+    setTotalAdultTickets,
+    setTotalChildTickets,
+  ] = useContext(dataContext);
+
+  //   const [totalAdultTickets, setTotalAdultTickets] = useState(0);
+  //   const [totalChildTickets, setTotalChildTickets] = useState(0);
   const [totalTicketPrice, setTotalTicketPrice] = useState(0);
 
   const [popEffect, setPopEffect] = useState(false);
@@ -92,19 +100,24 @@ function CheckoutPage() {
                   <p>13 år+</p>
                 </div>
                 <div className="ticketPicker__button">
-                  <button
+                  <motion.button
                     className={`roundButton ${
                       totalAdultTickets === 0 ? "disabledButton" : ""
                     }`}
                     onClick={decrementAdult}
                     disabled={totalAdultTickets == 0}
+                    whileHover={{ scale: 0.9 }}
                   >
                     -
-                  </button>
+                  </motion.button>
                   <h4>{totalAdultTickets}</h4>
-                  <button className="roundButton" onClick={incrementAdult}>
+                  <motion.button
+                    className="roundButton"
+                    onClick={incrementAdult}
+                    whileHover={{ scale: 1.1 }}
+                  >
                     +
-                  </button>
+                  </motion.button>
                 </div>
               </li>
               <li className="ticketPicker__type">
@@ -114,19 +127,24 @@ function CheckoutPage() {
                 </div>
 
                 <div className="ticketPicker__button">
-                  <button
+                  <motion.button
                     className={`roundButton ${
                       totalChildTickets === 0 ? "disabledButton" : ""
                     }`}
                     onClick={decrementChild}
                     disabled={totalChildTickets == 0}
+                    whileHover={{ scale: 0.9 }}
                   >
                     -
-                  </button>
+                  </motion.button>
                   <h4>{totalChildTickets}</h4>
-                  <button className="roundButton" onClick={incrementChild}>
+                  <motion.button
+                    className="roundButton"
+                    onClick={incrementChild}
+                    whileHover={{ scale: 1.1 }}
+                  >
                     +
-                  </button>
+                  </motion.button>
                 </div>
               </li>
             </ul>
@@ -139,15 +157,16 @@ function CheckoutPage() {
           >
             {totalTicketPrice} sek
           </motion.article>
-          <button
+          <motion.button
             className={`payButton ${
               totalTicketPrice == 0 ? "disabledPayButton" : ""
             }`}
             disabled={totalTicketPrice == 0}
             onClick={handleClick}
+            whileHover={{ scale: 1.1 }}
           >
             Betala
-          </button>
+          </motion.button>
         </section>
       </main>
     </div>
