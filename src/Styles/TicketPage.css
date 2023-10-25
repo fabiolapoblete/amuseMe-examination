@@ -1,0 +1,11 @@
+.header {
+    color: var(--secondary-text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fa-mail-reply {
+    font-size: 1.9rem;
+    align-self: flex-start;
+}

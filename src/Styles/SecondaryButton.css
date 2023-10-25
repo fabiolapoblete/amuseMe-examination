@@ -1,11 +1,11 @@
-.primaryButton {
-    background-color: var(--primary-color);
+.secondaryButton {
+    background-color: var(--green-color);
     color: var(--main-text-color);
     font-family: var(--main-font);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    border-radius: 1.3rem;
-    padding: 0.8rem 1.5rem;
+    border-radius: 1.9rem;
+    padding: 0.3rem 1.5rem;
     border: none;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;

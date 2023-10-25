@@ -6,6 +6,7 @@ function PrimaryButton({ title, action }) {
     <AnimatePresence>
       <motion.button
         className="primaryButton"
+        onClick={action}
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{
           opacity: 1,
@@ -30,7 +31,6 @@ function PrimaryButton({ title, action }) {
           scale: 0.9,
           transition: { type: "spring", stiffness: 400, damping: 10 },
         }}
-        onClick={action}
       >
         {title}
       </motion.button>

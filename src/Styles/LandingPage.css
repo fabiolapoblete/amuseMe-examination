@@ -29,6 +29,7 @@ a {
     position: absolute;
     top: -2.5rem;
     right: 0.5rem;
+    z-index: 2;
 }
 
 .fa {
@@ -59,6 +60,7 @@ a {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    z-index: 1;
 }
 
 .menu__item {

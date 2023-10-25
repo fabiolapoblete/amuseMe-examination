@@ -5,6 +5,7 @@ import Bubbles from "../Components/Bubbles";
 import MainCard from "../Components/MainCard";
 import "../Styles/LandingPage.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
   const [open, setOpen] = useState(false);
@@ -24,6 +25,13 @@ function LandingPage() {
       },
     },
   };
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/tickets");
+  };
+
   return (
     <div className="wrapper">
       <Bubbles />
@@ -39,6 +47,7 @@ function LandingPage() {
           >
             <motion.div
               className="menu__item"
+              onClick={handleClick}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
@@ -177,7 +186,7 @@ function LandingPage() {
           )}
         </div>
         <MainTitle title={"Välkommen till AmuseMe!"} />
-        <PrimaryButton title={"Biljetter"} />
+        <PrimaryButton action={handleClick} title={"Biljetter"} />
       </header>
 
       <main>

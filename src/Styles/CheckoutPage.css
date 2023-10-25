@@ -1,0 +1,116 @@
+.ticketQuantity {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.header {
+    color: var(--secondary-text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fa-mail-reply {
+    font-size: 1.9rem;
+    align-self: flex-start;
+}
+
+.ticketInfo {
+    color: var(--secondary-text-color);
+}
+
+.ticketInfo h3 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.ticketInfo p {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.ticketPicker {
+    background-color: var(--blue-color);
+    color: var(--main-text-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 335px;
+    height: 240px;
+}
+
+.ticketPicker h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.ticketPicker p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.ticketPicker ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ticketPicker__type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ticketPicker__button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.ticketPicker__button button {
+    background-color: var(--primary-color);
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+    font-size: 30px;
+    font-weight: 700;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.disabled-button {
+    background-color: rgb(206, 204, 204);
+}
+
+.totalTicketPrice {
+    background-color: var(--secondary-text-color);
+    color: var(--main-text-color);
+    width: 335px;
+    height: 113px;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.payButton {
+    background-color: var(--primary-color);
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 1.3rem;
+    padding: 12px 24px;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 2rem;
+}
