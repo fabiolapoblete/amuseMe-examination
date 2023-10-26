@@ -16,10 +16,19 @@ function MainCard({ title, desc, fullDesc }) {
       //   stiffness: 50,
       // }}
     >
-      <header className="mainCard__header">{title}</header>
+      {/* <header className="mainCard__header">{title}</header>
       <section className="mainCard__desc">
         <p className="shortDesc">{desc}</p>
         <p className="fullDesc">{fullDesc}</p>
+      </section> */}
+      <section className="inner">
+        <aside className="mainCard__fullDesc">
+          <p className="fullDesc--text">{fullDesc}</p>
+        </aside>
+        <header className="mainCard__header">
+          <h3>{title}</h3>
+          <p>{desc}</p>
+        </header>
       </section>
     </motion.article>
   );
