@@ -1,4 +1,11 @@
-main {
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,74 +13,6 @@ main {
     margin-top: 6rem;
 }
 
-a {
-    color:var(--main-text-color);
-    font-size: 2rem;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-}
+/*Media query för korten vid stor skärm?*/
 
-.wrapper {
-    position: relative;
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6rem;
-}
-
-.menu {
-    position: absolute;
-    top: -2.5rem;
-    right: 0.5rem;
-    z-index: 2;
-}
-
-.fa {
-    cursor: pointer;
-    font-size: 2rem;
-}
-
-.fa-bars {
-    color: var(--secondary-text-color);
-}
-
-.fa-close {
-    color: var(--main-text-color);
-}
-
-.menu_container{
-    background-color: var(--secondary-text-color);
-    color:var(--main-text-color);
-    max-width: 100%;
-    height:100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    z-index: 1;
-}
-
-.menu__item {
-    display: flex;
-    flex-direction: row;
-    align-items: first baseline;
-    gap: 2rem;
-    width: 100%;
-    padding-left: 2rem; 
-}
-
-.balloon {
-    width: 50px;
-    height: 50px;
-}
 

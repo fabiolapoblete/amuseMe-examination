@@ -1,31 +1,13 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import Bubbles from "../Components/Bubbles";
+import Menu from "../Components/Menu";
 import MainTitle from "../Components/MainTitle";
 import PrimaryButton from "../Components/PrimaryButton";
-import Bubbles from "../Components/Bubbles";
 import MainCard from "../Components/MainCard";
 import "../Styles/LandingPage.css";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
-  const [open, setOpen] = useState(false);
-
-  const closeMenu = () => {
-    setOpen(false);
-  };
-
-  const item = {
-    exit: {
-      opacity: 0,
-      height: 0,
-      transition: {
-        ease: "easeInOut",
-        duration: 0.3,
-        delay: 1.2,
-      },
-    },
-  };
-
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -35,160 +17,13 @@ function LandingPage() {
   return (
     <div className="wrapper">
       <Bubbles />
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            className="menu_container"
-            variants={item}
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "100vh", opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            // exit="exit"
-          >
-            <motion.div
-              className="menu__item"
-              onClick={handleClick}
-              initial={{ y: 80, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              exit={{
-                opacity: 0,
-                y: 90,
-                transition: {
-                  ease: "easeInOut",
-                  delay: 1,
-                },
-              }}
-            >
-              <img
-                className="balloon"
-                src="../../public/hot-air-balloon.png"
-                alt=""
-              />
-              <a href="">Köp biljetter</a>
-            </motion.div>
-            <motion.div
-              className="menu__item"
-              initial={{ y: 80, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.7 }}
-              exit={{
-                opacity: 0,
-                y: 90,
-                transition: {
-                  ease: "easeInOut",
-                  delay: 0.8,
-                },
-              }}
-            >
-              <img
-                className="balloon"
-                src="../../public/hot-air-balloon.png"
-                alt=""
-              />
-              <a href="">Öppetider</a>
-            </motion.div>
-            <motion.div
-              className="menu__item"
-              initial={{ y: 80, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              exit={{
-                opacity: 0,
-                y: 90,
-                transition: {
-                  ease: "easeInOut",
-                  delay: 0.6,
-                },
-              }}
-            >
-              <img
-                className="balloon"
-                src="../../public/hot-air-balloon.png"
-                alt=""
-              />
-              <a href="">Attraktioner</a>
-            </motion.div>
-            <motion.div
-              className="menu__item"
-              initial={{ y: 80, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              exit={{
-                opacity: 0,
-                y: 90,
-                transition: {
-                  ease: "easeInOut",
-                  delay: 0.4,
-                },
-              }}
-            >
-              <img
-                className="balloon"
-                src="../../public/hot-air-balloon.png"
-                alt=""
-              />
-              <a href="">Mat & Dryck</a>
-            </motion.div>
-
-            <motion.div
-              className="menu__item"
-              initial={{ y: 80, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              exit={{
-                opacity: 0,
-                y: 90,
-                transition: {
-                  ease: "easeInOut",
-                  delay: 0.2,
-                },
-              }}
-            >
-              <img
-                className="balloon"
-                src="../../public/hot-air-balloon.png"
-                alt=""
-              />
-              <a href="">Evenemang</a>
-            </motion.div>
-
-            <motion.div
-              className="menu__item"
-              initial={{ y: 80, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              exit={{
-                opacity: 0,
-                y: 90,
-                transition: {
-                  ease: "easeInOut",
-                  delay: 0.0,
-                },
-              }}
-            >
-              <img
-                className="balloon"
-                src="../../public/hot-air-balloon.png"
-                alt=""
-              />
-              <a href="">Kontakta oss</a>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
       <header className="header">
-        <div className="menu" onClick={() => setOpen(!open)}>
-          {open ? (
-            <i className="fa fa-close"></i>
-          ) : (
-            <i className="fa fa-bars" onClick={closeMenu}></i>
-          )}
-        </div>
+        <Menu />
         <MainTitle title={"Välkommen till AmuseMe!"} />
       </header>
 
       <motion.main
+        className="main__container"
         initial={{ x: -500, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{
@@ -201,6 +36,7 @@ function LandingPage() {
         }}
       >
         <PrimaryButton action={handleClick} title={"Biljetter"} />
+
         <MainCard
           title={"Attraktioner"}
           desc={"Upplev alla våra hisnande attraktioner"}

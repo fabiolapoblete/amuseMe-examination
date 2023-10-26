@@ -1,5 +1,10 @@
 .bubbleWrapper {
     position: relative;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .bubble {
@@ -13,8 +18,8 @@
     background-color: var(--blue-color);
     width: 9.7rem;
     height: 9.7rem;
-    top: 24px;
-    left: 37px;
+    top: -20px;
+    left: -150px;
     animation-delay: 0s  
 }
 
@@ -23,16 +28,17 @@
     width: 5.9rem;
     height: 5.9rem;
     top: 54px;
-    left: 228px;
+    left: 40px;
     animation-delay: 1s  
 }
+
 
 .whiteBubble {
     background-color: var(--main-text-color);
     width: 3.9rem;
     height: 3.9rem;
-    top: 163px;
-    left: 178px;
+    top: 153px;
+    left: -30px;
     animation-delay: 2s;   
 }
 
@@ -41,7 +47,7 @@
     width: 3.6rem;
     height: 3.6rem;
     top: 179px;
-    left: 294px;
+    right: -160px;
     animation-delay: 3s;   
 }
 
