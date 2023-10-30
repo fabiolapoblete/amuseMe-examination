@@ -24,7 +24,11 @@ function TicketPage() {
       className="wrapper"
     >
       <header className="header">
-        <i onClick={backOnClick} className="fa fa-mail-reply"></i>
+        <motion.i
+          whileHover={{ scale: 1.1, x: -10 }}
+          onClick={backOnClick}
+          className="fa fa-mail-reply"
+        ></motion.i>
         <SecondaryTitle title={"Äventyret börjar nu!"} />
       </header>
       <main>

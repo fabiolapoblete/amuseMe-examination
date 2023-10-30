@@ -1,3 +1,9 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .ticketQuantity {
     display: flex;
     flex-direction: column;
@@ -8,8 +14,10 @@
 .header {
     color: var(--secondary-text-color);
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .fa-mail-reply {

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Bubbles from "../Components/Bubbles";
 import Menu from "../Components/Menu";
-import MainTitle from "../Components/MainTitle";
+// import MainTitle from "../Components/MainTitle";
 import PrimaryButton from "../Components/PrimaryButton";
 import MainCard from "../Components/MainCard";
 import "../Styles/LandingPage.css";
