@@ -3,11 +3,12 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import { createContext, useState } from "react";
-import { AnimatePresence } from "framer-motion";
-import LandingPage from "./Pages/LandingPage";
-import TicketPage from "./Pages/TicketPage";
-import CheckoutPage from "./Pages/CheckoutPage";
-import ConfirmationPage from "./Pages/ConfirmationPage";
+import AnimatedRoutes from "./Components/AnimatedRoutes";
+// import { AnimatePresence } from "framer-motion";
+// import LandingPage from "./Pages/LandingPage";
+// import TicketPage from "./Pages/TicketPage";
+// import CheckoutPage from "./Pages/CheckoutPage";
+// import ConfirmationPage from "./Pages/ConfirmationPage";
 
 export const dataContext = createContext();
 
@@ -24,7 +25,10 @@ function App() {
       ]}
     >
       <Router>
-        <AnimatePresence
+        <div className="wrapperContainer">
+          <AnimatedRoutes />
+        </div>
+        {/* <AnimatePresence
           onExitComplete={() => window.scrollTo(0, 0)}
           mode="wait"
         >
@@ -34,7 +38,7 @@ function App() {
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/confirmation" element={<ConfirmationPage />} />
           </Routes>
-        </AnimatePresence>
+        </AnimatePresence> */}
       </Router>
     </dataContext.Provider>
   );

@@ -64,7 +64,7 @@ function Menu() {
               }}
             >
               <img
-                className="balloon"
+                className="menu__balloon"
                 src="../../public/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
@@ -86,7 +86,7 @@ function Menu() {
               }}
             >
               <img
-                className="balloon"
+                className="menu__balloon"
                 src="../../public/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
@@ -108,7 +108,7 @@ function Menu() {
               }}
             >
               <img
-                className="balloon"
+                className="menu__balloon"
                 src="../../public/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
@@ -130,7 +130,7 @@ function Menu() {
               }}
             >
               <img
-                className="balloon"
+                className="menu__balloon"
                 src="../../public/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
@@ -152,7 +152,7 @@ function Menu() {
               }}
             >
               <img
-                className="balloon"
+                className="menu__balloon"
                 src="../../public/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
@@ -174,7 +174,7 @@ function Menu() {
               }}
             >
               <img
-                className="balloon"
+                className="menu__balloon"
                 src="../../public/hot-air-balloon.png"
                 alt="hot air balloon image"
               />

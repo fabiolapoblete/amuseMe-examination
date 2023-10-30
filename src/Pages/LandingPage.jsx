@@ -15,11 +15,25 @@ function LandingPage() {
   };
 
   return (
-    <div className="wrapper">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 30 }}
+      transition={{ duration: 0.3 }}
+      className="wrapper"
+    >
       <Bubbles />
       <header className="header">
         <Menu />
-        <MainTitle title={"Välkommen till AmuseMe!"} />
+        <motion.h1
+          className="mainTitle"
+          initial={{ opacity: 0, scale: 0.3 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 10, duration: 5 }}
+        >
+          Välkommen till <br /> AmuseMe!
+        </motion.h1>
+        {/* <MainTitle title={"Välkommen till AmuseMe!"} /> */}
       </header>
 
       <motion.main
@@ -66,7 +80,7 @@ function LandingPage() {
           }
         />
       </motion.main>
-    </div>
+    </motion.div>
   );
 }
 

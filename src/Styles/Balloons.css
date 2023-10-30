@@ -1,0 +1,27 @@
+.balloonWrapper {
+    position: relative;
+    background-color: aqua;
+}
+
+.balloon {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+}
+
+.balloon__1 {
+    left: 90px;
+}
+
+.balloon__2 {
+    left: 30px;
+}
+
+.balloon__3 {
+    left: -180px;
+}
+
+.balloon__4 {
+    left: -120px;
+}

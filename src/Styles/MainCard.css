@@ -33,6 +33,7 @@
     opacity: 0;
     object-fit: cover;
     font-size: 1.1rem;
+    transition: opacity 0.5s 0.8s ease-in-out;
 }
 
 .mainCard__header {
