@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Bubbles from "../Components/Bubbles";
 import Menu from "../Components/Menu";
-// import MainTitle from "../Components/MainTitle";
 import PrimaryButton from "../Components/PrimaryButton";
 import MainCard from "../Components/MainCard";
 import "../Styles/LandingPage.css";
@@ -16,13 +15,14 @@ function LandingPage() {
 
   return (
     <motion.div
+      className="wrapper"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 30 }}
       transition={{ duration: 0.3 }}
-      className="wrapper"
     >
       <Bubbles />
+
       <header className="header">
         <Menu />
         <motion.h1
@@ -33,7 +33,6 @@ function LandingPage() {
         >
           Välkommen till <br /> AmuseMe!
         </motion.h1>
-        {/* <MainTitle title={"Välkommen till AmuseMe!"} /> */}
       </header>
 
       <motion.main

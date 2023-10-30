@@ -1,26 +1,30 @@
-import SecondaryTitle from "../Components/SecondaryTitle";
-import { useNavigate } from "react-router-dom";
-import "../Styles/CheckoutPage.css";
 import { useState, useEffect, useContext } from "react";
-import { easeInOut, motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { dataContext } from "../App";
+import { motion } from "framer-motion";
+import SecondaryTitle from "../Components/SecondaryTitle";
+import "../Styles/CheckoutPage.css";
 
+//Logic for calculating current date
 const date = new Date();
-
 let currentDay = String(date.getDate()).padStart(2, "0");
 let currentMonth = String(date.getMonth() + 1).padStart(2, "0");
 let currentYear = date.getFullYear();
 let currentDate = `${currentDay}-${currentMonth}-${currentYear}`;
 
 function CheckoutPage() {
+  //Navigating back to ticket page and navigation to confirmation page
   const navigate = useNavigate();
 
   const backOnClick = () => {
     navigate("/tickets");
   };
-  const adultPrice = 495;
-  const childPrice = 295;
 
+  const handleClick = () => {
+    navigate("/confirmation");
+  };
+
+  //State and logic for number of tickets and ticket price
   const [
     totalChildTickets,
     totalAdultTickets,
@@ -28,11 +32,10 @@ function CheckoutPage() {
     setTotalChildTickets,
   ] = useContext(dataContext);
 
-  //   const [totalAdultTickets, setTotalAdultTickets] = useState(0);
-  //   const [totalChildTickets, setTotalChildTickets] = useState(0);
   const [totalTicketPrice, setTotalTicketPrice] = useState(0);
 
-  const [popEffect, setPopEffect] = useState(false);
+  const adultPrice = 495;
+  const childPrice = 295;
 
   const incrementAdult = () => {
     setTotalAdultTickets((prevTotalAdultTickets) => prevTotalAdultTickets + 1);
@@ -56,10 +59,7 @@ function CheckoutPage() {
       );
   };
 
-  const popVariants = {
-    pop: { scale: 1.1, transition: { duration: 0.3 } },
-  };
-
+  //Each time total adult/child tickets is changes the total ticket price is updated
   useEffect(() => {
     const adultTotalPrice = totalAdultTickets * adultPrice;
     const childTotalPrice = totalChildTickets * childPrice;
@@ -67,6 +67,14 @@ function CheckoutPage() {
     setPopEffect(true);
   }, [totalAdultTickets, totalChildTickets]);
 
+  //Animation for total price
+  const [popEffect, setPopEffect] = useState(false);
+
+  const popVariants = {
+    pop: { scale: 1.1, transition: { duration: 0.3 } },
+  };
+
+  //The popEffect is triggered when the price is triggered
   useEffect(() => {
     if (popEffect) {
       const timer = setTimeout(() => {
@@ -75,10 +83,6 @@ function CheckoutPage() {
       return () => clearTimeout(timer);
     }
   }, [popEffect]);
-
-  const handleClick = () => {
-    navigate("/confirmation");
-  };
 
   return (
     <motion.div
@@ -111,7 +115,7 @@ function CheckoutPage() {
                 </div>
                 <div className="ticketPicker__button">
                   <motion.button
-                    className={`roundButton ${
+                    className={`button roundButton ${
                       totalAdultTickets === 0 ? "disabledButton" : ""
                     }`}
                     onClick={decrementAdult}
@@ -122,7 +126,7 @@ function CheckoutPage() {
                   </motion.button>
                   <h4>{totalAdultTickets}</h4>
                   <motion.button
-                    className="roundButton"
+                    className="button roundButton"
                     onClick={incrementAdult}
                     whileHover={{ scale: 1.1 }}
                   >
@@ -138,7 +142,7 @@ function CheckoutPage() {
 
                 <div className="ticketPicker__button">
                   <motion.button
-                    className={`roundButton ${
+                    className={`button roundButton ${
                       totalChildTickets === 0 ? "disabledButton" : ""
                     }`}
                     onClick={decrementChild}
@@ -149,7 +153,7 @@ function CheckoutPage() {
                   </motion.button>
                   <h4>{totalChildTickets}</h4>
                   <motion.button
-                    className="roundButton"
+                    className="button roundButton"
                     onClick={incrementChild}
                     whileHover={{ scale: 1.1 }}
                   >
@@ -168,8 +172,8 @@ function CheckoutPage() {
             {totalTicketPrice} sek
           </motion.article>
           <motion.button
-            className={`payButton ${
-              totalTicketPrice == 0 ? "disabledPayButton" : ""
+            className={`button payButton ${
+              totalTicketPrice == 0 ? "disabledButton" : ""
             }`}
             disabled={totalTicketPrice == 0}
             onClick={handleClick}

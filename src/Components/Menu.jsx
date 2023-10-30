@@ -4,16 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import "../Styles/Menu.css";
 
 function Menu() {
-  const [open, setOpen] = useState(false);
-
-  const closeMenu = () => {
-    setOpen(false);
-  };
-
+  //Navigation to tickets page
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/tickets");
+  };
+
+  //Menu state and animation
+  const [open, setOpen] = useState(false);
+
+  const closeMenu = () => {
+    setOpen(false);
   };
 
   const menuItem = {
@@ -23,7 +25,7 @@ function Menu() {
 
   return (
     <div>
-      <div className="menu--icon" onClick={() => setOpen(!open)}>
+      <div className="menu__icon" onClick={() => setOpen(!open)}>
         {open ? (
           <i className="fa fa-close"></i>
         ) : (

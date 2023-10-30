@@ -1,5 +1,5 @@
-import "../Styles/SecondaryButton.css";
 import { motion } from "framer-motion";
+import "../Styles/SecondaryButton.css";
 
 function SecondaryButton({ title, action }) {
   return (

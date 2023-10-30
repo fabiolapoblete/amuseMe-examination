@@ -1,6 +1,5 @@
 .bubbleWrapper {
     position: relative;
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,8 +7,8 @@
 }
 
 .bubble {
-    border-radius: 50%;
     position: absolute;
+    border-radius: 50%;
     opacity: 0;
     animation: bubblePop 5s linear 2;
 }
@@ -18,8 +17,8 @@
     background-color: var(--blue-color);
     width: 9.7rem;
     height: 9.7rem;
-    top: -20px;
-    left: -150px;
+    top: -1.3rem;
+    left: -9.4rem;
     animation-delay: 0s  
 }
 
@@ -27,8 +26,8 @@
     background-color: var(--primary-color);
     width: 5.9rem;
     height: 5.9rem;
-    top: 54px;
-    left: 40px;
+    top: 3.4rem;
+    left: 2.5rem;
     animation-delay: 1s  
 }
 
@@ -37,8 +36,8 @@
     background-color: var(--main-text-color);
     width: 3.9rem;
     height: 3.9rem;
-    top: 153px;
-    left: -30px;
+    top: 9.6rem;
+    left: -1.9rem;
     animation-delay: 2s;   
 }
 
@@ -46,8 +45,8 @@
     background-color: var(--secondary-text-color);
     width: 3.6rem;
     height: 3.6rem;
-    top: 179px;
-    right: -160px;
+    top: 11.2rem;
+    right: -10rem;
     animation-delay: 3s;   
 }
 

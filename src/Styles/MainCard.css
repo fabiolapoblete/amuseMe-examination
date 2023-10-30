@@ -1,39 +1,28 @@
-.mainCard {
-    /* background: linear-gradient(180deg, rgba(67,107,85,1) 50%, rgba(99,162,151,1) 50%);
-    color: var(--main-text-color); */
-    /* width: 300px;
-    height: 180px; */
+.mainCard__inner {
+    background-color: var(--green-color);
+    width: 25rem;
+    height: 11.9rem;
     display: flex;
-}
-
-.inner {
-    display: flex;
-    background: var(--green-color);
-    border-radius: 10px;
-    width: 400px;
-    height: 190px;
-   overflow:hidden;
-   transition: all .5s ease-in-out;
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: all .5s ease-in-out;
 }
 
 .mainCard__fullDesc {
+    background-color: var(--blue-color);
+    width: 11.9rem;
+    clip-path: circle(80% at 0% 40%);
     display: flex;
     align-items: center;
-    width: 190px;
-    clip-path: circle(80% at 0% 40%);
-    /* clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); */
-    transition: all .8s ease-in-out;
-    background: var(--blue-color);
+    border-radius: 8px;
     text-align: center;
+    transition: all .8s ease-in-out;
 }
 
-.fullDesc--text {
+.mainCard__fullDesc--text {
     color: var(--main-text-color);
-    opacity: 0;
-    object-fit: cover;
     font-size: 1.1rem;
-    transition: opacity 0.5s 0.8s ease-in-out;
+    opacity: 0;
 }
 
 .mainCard__header {
@@ -48,49 +37,38 @@
 .mainCard__header h3 {
     font-size: 1.8rem;
     font-weight: 700;
-    display: block;
 }
 
 .mainCard__header p {
     font-size: 1.2rem;
-
 }
 
-.inner:hover .mainCard__header {
+.mainCard__inner:hover .mainCard__header {
     display: none;
 }
 
-.inner:hover .mainCard__fullDesc {
-    opacity: 1;
-    flex:1;
+.mainCard__inner:hover .mainCard__fullDesc {
     clip-path: none;    
-    animation: arrow 0.8s forwards;
+    opacity: 1;
+    flex: 1;
+    animation: circle 0.8s forwards;
     padding: 1rem;
 }
 
-.inner:hover .fullDesc--text{
+.mainCard__inner:hover .mainCard__fullDesc--text{
     opacity: 1;
+    transition: opacity 0.5s 0.8s ease-in;
 }
 
-@keyframes arrow {
+@keyframes circle {
     0%  {
-        /* clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); */
-    width: 200px;
         clip-path: circle(80% at 0% 40%);
-
-
     }
     50% {
-        /* clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); */
-    width:200px;
         clip-path: circle(80% at 0% 40%);
-
     }
 
     100% {
-        width: 200px;
         clip-path: none;
-    /* clip-path: circle(110% at 0% 0%); */
-
     }
 }

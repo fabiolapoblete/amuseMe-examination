@@ -4,20 +4,13 @@
     gap: 2rem;
 }
 
-.ticketQuantity {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
 .header {
     color: var(--secondary-text-color);
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 0.5rem;
-    width: 100%;
 }
 
 .fa-mail-reply {
@@ -25,37 +18,33 @@
     align-self: flex-start;
 }
 
+.ticketQuantity {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
 .ticketInfo {
     color: var(--secondary-text-color);
+    font-weight: 700;
 }
 
 .ticketInfo h3 {
-    font-size: 35px;
-    font-weight: 700;
+    font-size: 2.2rem;
 }
 
 .ticketInfo p {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .ticketPicker {
     background-color: var(--blue-color);
     color: var(--main-text-color);
-    border-radius: 10px;
+    width: 20.9rem;
+    height: 15rem;
     padding: 1.5rem;
-    width: 335px;
-    height: 240px;
-}
-
-.ticketPicker h3 {
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.ticketPicker p {
-    font-size: 20px;
-    font-weight: 400;
+    border-radius: 0.6rem;
 }
 
 .ticketPicker ul {
@@ -65,6 +54,16 @@
     gap: 1rem;
 }
 
+.ticketPicker h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.ticketPicker p {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
 .ticketPicker__type {
     display: flex;
     flex-direction: row;
@@ -72,79 +71,50 @@
 }
 
 .ticketPicker__button {
+    font-size: 2rem;
+    font-weight: 700;
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.roundButton {
-    background-color: var(--primary-color);
-    color: var(--main-text-color);
-    font-family: var(--main-font);
-    font-size: 30px;
-    font-weight: 700;
-    width: 42px;
-    height: 42px;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
-
-.payButton {
-    background-color: var(--primary-color);
-    color: var(--main-text-color);
-    font-family: var(--main-font);
-    font-size: 32px;
-    font-weight: 700;
-    border-radius: 1.3rem;
-    padding: 12px 24px;
-    border: none;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    margin-top: 2rem;
-}
-
-.disabledButton {
-    background-color: rgb(206, 204, 204);
-    color: var(--main-text-color);
-    font-family: var(--main-font);
-    font-size: 30px;
-    font-weight: 700;
-    width: 42px;
-    height: 42px;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
-
-.disabledPayButton {
-    background-color: rgb(206, 204, 204);
-    color: var(--main-text-color);
-    font-family: var(--main-font);
-    font-size: 32px;
-    font-weight: 700;
-    border-radius: 1.3rem;
-    padding: 12px 24px;
-    border: none;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    margin-top: 2rem;
 }
 
 .totalTicketPrice {
     background-color: var(--secondary-text-color);
     color: var(--main-text-color);
-    width: 335px;
-    height: 113px;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
+    width: 20.9rem;
+    height: 7.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 0.6rem;
 }
 
+.button {
+    background-color: var(--primary-color);
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.roundButton {
+    font-size: 1.9rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+}
+
+.payButton {
+    font-size: 2rem;
+    border-radius: 1.3rem;
+    padding: 0.8rem 1.5rem;
+    margin-top: 2rem;
+}
+
+.disabledButton {
+    background-color: rgb(206, 204, 204);
+}

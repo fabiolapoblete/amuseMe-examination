@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { dataContext } from "../App";
-import SecondaryTitle from "../Components/SecondaryTitle";
-import "../Styles/ConfirmationPage.css";
 import { motion } from "framer-motion";
-import Balloons from "../Components/Balloons";
+import SecondaryTitle from "../Components/SecondaryTitle";
 import Ticket from "../Components/Ticket";
+import Balloons from "../Components/Balloons";
+import "../Styles/ConfirmationPage.css";
 
 function ConfirmationPage() {
   const [totalChildTickets, totalAdultTickets] = useContext(dataContext);
@@ -19,6 +19,7 @@ function ConfirmationPage() {
     { length: totalAdultTickets },
     (_, index) => index + 1
   );
+
   const childTickets = Array.from(
     { length: totalChildTickets },
     (_, index) => index + 1

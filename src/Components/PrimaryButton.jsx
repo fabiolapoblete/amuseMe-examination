@@ -1,5 +1,5 @@
-import "../Styles/PrimaryButton.css";
 import { motion, AnimatePresence } from "framer-motion";
+import "../Styles/PrimaryButton.css";
 
 function PrimaryButton({ title, action }) {
   return (

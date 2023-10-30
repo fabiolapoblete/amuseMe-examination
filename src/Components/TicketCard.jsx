@@ -1,6 +1,6 @@
+import { motion } from "framer-motion";
 import SecondaryButton from "./SecondaryButton";
 import "../Styles/TicketCard.css";
-import { motion } from "framer-motion";
 
 function TicketCard({ title, desc, action }) {
   return (
@@ -8,7 +8,7 @@ function TicketCard({ title, desc, action }) {
       className="ticketCard"
       whileHover={{
         rotate: -20,
-        transition: { ease: "anticipate", duration: 2 },
+        transition: { duration: 2, ease: "anticipate" },
       }}
     >
       <h3 className="ticketCard__title">{title}</h3>

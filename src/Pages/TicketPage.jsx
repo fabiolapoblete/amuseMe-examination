@@ -1,8 +1,8 @@
-import SecondaryTitle from "../Components/SecondaryTitle";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import SecondaryTitle from "../Components/SecondaryTitle";
 import TicketCard from "../Components/TicketCard";
 import "../Styles/TicketPage.css";
-import { motion } from "framer-motion";
 
 function TicketPage() {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ function TicketPage() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 30 }}
       transition={{ duration: 0.3 }}
-      className="wrapper"
+      className="ticketPageWrapper"
     >
       <header className="header">
         <motion.i

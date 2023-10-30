@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 4rem;
 }
 
 .summary {
@@ -11,14 +10,14 @@
     color: var(--main-text-color);
     font-size: 2rem;
     font-weight: 700;
-    padding: 3rem 2rem;
-    border-radius: 8px;
-    width: 350px;
-    height: 280px;
+    width: 21.9rem;
+    height: 17.5rem;
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
+    padding: 3rem 2rem;
+    border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
 }
 
 .summary__amount {
@@ -38,15 +37,12 @@
 }
 
 .tickets__container {
+    width: 21.9rem;
+    height: 18.8rem;
     display: flex;
-    width: 350px;
-    height: 300px;
-    overflow-x: auto;
-    scrollbar-width: thin;
     gap: 1rem;
-    /* flex: 0;
-    flex-shrink: 0; */
     padding: 1rem;
+    overflow-x: auto;
 }
 
 .tickets {
@@ -56,17 +52,11 @@
 
 ::-webkit-scrollbar {
     height: 5px;
-    /* width: 2px; */
     background: #fff3;
-    -webkit-border-radius: 10px;
-    /* -webkit-border-radius: 1ex; */
+    -webkit-border-radius: 0.6rem;
   }
   
 ::-webkit-scrollbar-thumb {
     background: var(--secondary-text-color);
-    -webkit-border-radius: 10px;
+    -webkit-border-radius: 0.6rem;
 }
-  
-/* ::-webkit-scrollbar-corner {
-    background: #fff3;
-} */

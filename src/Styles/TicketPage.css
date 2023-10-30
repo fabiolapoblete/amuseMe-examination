@@ -1,7 +1,12 @@
+.ticketPageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
 .header {
     color: var(--secondary-text-color);
     display: flex;
-    /* flex-direction: column; */
     gap: 0.5rem;
 }
 
