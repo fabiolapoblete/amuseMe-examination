@@ -31,7 +31,7 @@ function TicketPage() {
         ></motion.i>
         <SecondaryTitle title={"Äventyret börjar nu!"} />
       </header>
-      <main>
+      <main className="ticketCards">
         <TicketCard
           title={"Entré"}
           desc={"Entré och fria åk"}

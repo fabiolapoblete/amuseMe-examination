@@ -16,7 +16,7 @@
     flex-direction: column;
     padding: 3rem 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
     margin-top: 1rem;
 }
 
@@ -74,7 +74,7 @@
     font-weight: 700;
     border: none;
     border-radius: 1.3rem;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
     padding: 0.8rem 1.5rem;
     cursor: pointer;
     margin-top: 3rem;

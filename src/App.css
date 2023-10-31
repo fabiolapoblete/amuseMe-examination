@@ -9,6 +9,7 @@
   --blue-color: #63A297;
 
   --main-font: 'Sansita', sans-serif;
+  --box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
 * {
