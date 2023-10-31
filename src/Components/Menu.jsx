@@ -67,7 +67,7 @@ function Menu() {
             >
               <img
                 className="menu__balloon"
-                src="../../public/hot-air-balloon.png"
+                src="/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
               <p>Köp biljetter</p>
@@ -89,7 +89,7 @@ function Menu() {
             >
               <img
                 className="menu__balloon"
-                src="../../public/hot-air-balloon.png"
+                src="/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
               <p>Öppetider</p>
@@ -111,7 +111,7 @@ function Menu() {
             >
               <img
                 className="menu__balloon"
-                src="../../public/hot-air-balloon.png"
+                src="/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
               <p>Attraktioner</p>
@@ -133,7 +133,7 @@ function Menu() {
             >
               <img
                 className="menu__balloon"
-                src="../../public/hot-air-balloon.png"
+                src="/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
               <p>Mat & Dryck</p>
@@ -155,7 +155,7 @@ function Menu() {
             >
               <img
                 className="menu__balloon"
-                src="../../public/hot-air-balloon.png"
+                src="/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
               <p>Evenemang</p>
@@ -177,7 +177,7 @@ function Menu() {
             >
               <img
                 className="menu__balloon"
-                src="../../public/hot-air-balloon.png"
+                src="/hot-air-balloon.png"
                 alt="hot air balloon image"
               />
               <p>Kontakta oss</p>

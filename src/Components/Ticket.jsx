@@ -22,7 +22,7 @@ function Ticket({ ticketType, ticketNumber }) {
       </section>
       <section className="ticket__barcode">
         <img
-          src="../../public/barcode.png"
+          src="/barcode.png"
           alt="Scannable barcode representing your ticket"
         />
         <p># {ticketNumber}</p>

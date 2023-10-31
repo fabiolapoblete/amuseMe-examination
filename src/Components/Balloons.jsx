@@ -12,7 +12,7 @@ function Balloons() {
     <div className="balloonWrapper">
       <motion.img
         className="balloon balloon__1"
-        src="../../public/hot-air-balloon.png"
+        src="/hot-air-balloon.png"
         alt="hot air balloon image"
         variants={balloon}
         initial="initial"
@@ -22,7 +22,7 @@ function Balloons() {
       />
       <motion.img
         className="balloon balloon__2"
-        src="../../public/hot-air-balloon.png"
+        src="/hot-air-balloon.png"
         alt="hot air balloon image"
         variants={balloon}
         initial="initial"
@@ -32,7 +32,7 @@ function Balloons() {
       />
       <motion.img
         className="balloon balloon__3"
-        src="../../public/hot-air-balloon.png"
+        src="/hot-air-balloon.png"
         alt="hot air balloon image"
         variants={balloon}
         initial="initial"
@@ -42,7 +42,7 @@ function Balloons() {
       />
       <motion.img
         className="balloon balloon__4"
-        src="../../public/hot-air-balloon.png"
+        src="/hot-air-balloon.png"
         alt="hot air balloon image"
         variants={balloon}
         initial="initial"
