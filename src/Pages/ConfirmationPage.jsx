@@ -7,6 +7,8 @@ import Balloons from "../Components/Balloons";
 import "../Styles/ConfirmationPage.css";
 
 function ConfirmationPage() {
+  const [modal, setModal] = useState(false);
+
   const [totalChildTickets, totalAdultTickets] = useContext(dataContext);
 
   const adultPrice = 495;
@@ -15,23 +17,21 @@ function ConfirmationPage() {
   let totalTicketPrice =
     totalAdultTickets * adultPrice + totalChildTickets * childPrice;
 
-  const adultTickets = Array.from(
-    { length: totalAdultTickets },
-    (_, index) => index + 1
-  );
+  const adultTickets = [];
+  for (let i = 1; i <= totalAdultTickets; i++) {
+    adultTickets.push(i);
+  }
 
-  const childTickets = Array.from(
-    { length: totalChildTickets },
-    (_, index) => index + 1
-  );
+  const childTickets = [];
+  for (let i = 1; i <= totalChildTickets; i++) {
+    childTickets.push(i);
+  }
 
   const generateRandomTicketNumber = () => {
     const randomTicketNumber = Math.floor(1000 + Math.random() * 9000);
 
     return randomTicketNumber;
   };
-
-  const [modal, setModal] = useState(false);
 
   return (
     <>
