@@ -1,8 +1,9 @@
-# React + Vite
+# Individual examination project for UX/UI course
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The web application should have at least three pages with varying content. Each page must contain at least one interactive user experience enhanced with the use of animation. Use the 12 fundamental principles of animation as a guide for creating transitions and animations. The menu should be animated using the JavaScript library. A button should be animated organically on hover and click.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Technical requirements:
+- Semantic HTML and CSS
+- Vanilla JavaScript or React
+- Anime.js or Framer Motion
+- CSS transitions and keyframes
