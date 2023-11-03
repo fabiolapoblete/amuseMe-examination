@@ -1,14 +1,9 @@
+import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import LandingPage from "../Pages/LandingPage";
 import TicketPage from "../Pages/TicketPage";
 import CheckoutPage from "../Pages/CheckoutPage";
 import ConfirmationPage from "../Pages/ConfirmationPage";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
 
 function AnimatedRoutes() {
   const location = useLocation();
